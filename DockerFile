@@ -1,0 +1,5 @@
+FROM openjdk:11
+COPY ./src/main/java /testApp
+WORKDIR /testApp
+RUN javac SimpleTestClassForDocker.java
+ENTRYPOINT ["java", "SimpleTestClassForDocker"]
